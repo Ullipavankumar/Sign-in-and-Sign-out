@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UFT-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Sign In</title>
+    </head>
+    <body>
+        <h2>Sign in below</h2>
+        <form method="POST" action="{% url 'handle_logout' %}">
+            {% csrf_token %}
+            <label>User Name:</label>
+            <input type="text" name="username">
+            <br><br>
+            <label>Password:</label>
+            <input type="password" name="password">
+            <br><br>
+            <label>Email:</label>
+            <input type="email" name="email">
+            <br><br>
+            <label>Mobile:</label>
+            <input type="number" name="mobile">
+            <br><br>
+            <button type="submit">SIGN IN</button>
+        </form>
+            </body>
+        </html>
